@@ -3,19 +3,19 @@
 
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
   <!ENTITY rfc1034 PUBLIC ''
-    'http://xml.resource.org/public/rfc/bibxml/reference.RFC.1034.xml'>
+    'http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.1034.xml'>
   <!ENTITY rfc1035 PUBLIC ''
-    'http://xml.resource.org/public/rfc/bibxml/reference.RFC.1035.xml'>
+    'http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.1035.xml'>
   <!ENTITY rfc3152 PUBLIC ''
-    'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3152.xml'>
+    'http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3152.xml'>
   <!ENTITY rfc3172 PUBLIC ''
-    'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3172.xml'>
+    'http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3172.xml'>
   <!ENTITY rfc3596 PUBLIC ''
-    'http://xml.resource.org/public/rfc/bibxml/reference.RFC.3596.xml'>
+    'http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3596.xml'>
   <!ENTITY rfc4291 PUBLIC ''
-    'http://xml.resource.org/public/rfc/bibxml/reference.RFC.4291.xml'>
+    'http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.4291.xml'>
   <!ENTITY rfc6672 PUBLIC ''
-    'http://xml.resource.org/public/rfc/bibxml/reference.RFC.6672.xml'>
+    'http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6672.xml'>
 ]>
 
 <rfc category="bcp" ipr="trust200902"
