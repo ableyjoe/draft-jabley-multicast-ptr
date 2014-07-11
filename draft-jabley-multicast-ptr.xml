@@ -46,6 +46,28 @@
       </address>
     </author>
 
+    <author initials="M." surname="Richardson" fullname="Michael C. Richardson">
+      <organization>Sandelman Software Works Corp.</organization>
+      <address>
+        <postal>
+          <street>470 Dawson Avenue</street>
+          <city>Ottawa</city>
+          <region>ON</region>
+          <code>K1Z 5V7</code>
+          <country>Canada</country>
+        </postal>
+        <phone>+1 613 276 6809</phone>
+        <email>mcr@sandelman.ottawa.on.ca</email>
+      </address>
+    </author>
+
+    <author initials="T." surname="Wicinski" fullname="Tim Wicinski">
+      <organization>AOL</organization>
+      <address>
+        <email>tim.wicinski@teamaol.com</email>
+      </address>
+    </author>
+
     <date month="July" year="2014"/>
 
     <abstract>
