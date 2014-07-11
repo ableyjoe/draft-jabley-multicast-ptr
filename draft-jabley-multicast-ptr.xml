@@ -19,7 +19,7 @@
 ]>
 
 <rfc category="bcp" ipr="trust200902"
-  docName="draft-jabley-multicast-ptr-00">
+  docName="draft-jabley-multicast-ptr-01">
 
   <?rfc toc="yes" ?>
   <?rfc symrefs="yes" ?>
@@ -46,7 +46,7 @@
       </address>
     </author>
 
-    <date month="October" year="2013"/>
+    <date month="July" year="2014"/>
 
     <abstract>
       <t>The mapping of IPv4 and IPv6 addresses to names using the
@@ -474,6 +474,10 @@
           <list style="hanging">
 	    <t hangText="00">Initial draft, circulated for the
 	      purposes of entertainment.</t>
+
+            <t hangText="01">Bumped draft number and updated date
+              to resurrect, based on possibility of renewed interest.
+              Added Michael and Tim as co-authors.</t>
 	  </list>
 	</t>
       </section>
