@@ -218,7 +218,7 @@
           <t>The IANA is directed to create a new registry as follows:
 
             <list style="hanging">
-              <t hangText="Registry Name:">IPv6 Multicast Address Scopes</t>
+              <t hangText="Registry Name:">IPv6 Multicast Scopes</t>
 
               <t hangText="Registration Procedure:">Standards Action</t>
 
@@ -280,8 +280,8 @@
             <c><xref target="RFC4291"/></c>
           </texttable>
 
-          <t>The IANA may add "Date Registered" and "Last Revised"
-            columns to the schema at its discretion.</t>
+          <t>Additionally, The IANA SHOULD add "Date Registered" and "Last Revised"
+            columns to the schema.</t>
         </section>
 
         <section title="IPv4 Multicast Address Space Registries">
