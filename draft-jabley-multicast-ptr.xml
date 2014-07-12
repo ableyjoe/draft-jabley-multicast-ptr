@@ -73,7 +73,6 @@
        </postal>
        <phone>+1.571.449.1550</phone>
        <email>tjw.ietf@gmail.com</email>
-     </postal>
       </address>
     </author>
 
@@ -266,7 +265,7 @@
             <c>0x3</c>
             <c>REALM-LOCAL</c>
             <c>Realm-Local Scope</c>
-            <c><xref target="ID.draft-ietf-6man-multicast-scopes"/></c>
+            <c><xref target="I-D.multicast-scopes"/></c>
 
             <c>0x4</c>
             <c>ADMIN-LOCAL</c>
@@ -488,6 +487,18 @@
       &rfc1035;
       &rfc3596;
       &rfc4291;
+      <reference anchor="I-D.multicast-scopes">
+        <front>
+          <title>IPv6 Multicast Address Scopes</title>
+          <author fullname="Ron Droms" initials="R." surname="Droms">
+            <organization>Cisco</organization>
+          </author>
+          <date month="July" year="2014" />
+
+        </front>
+        <format target="http://www.ietf.org/id/draft-ietf-6man-multicast-scopes-07"
+                type="XML" />
+      </reference>
     </references>
 
     <references title="Informative References">
