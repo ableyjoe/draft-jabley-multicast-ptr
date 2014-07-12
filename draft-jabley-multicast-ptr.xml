@@ -255,9 +255,9 @@
             <c><xref target="RFC4291"/></c>
 
             <c>0x3</c>
-            <c>(none)</c>
-            <c>Reserved</c>
-            <c><xref target="RFC4291"/></c>
+            <c>REALM-LOCAL</c>
+            <c>Realm-Local Scope</c>
+            <c><xref target="ID.draft-ietf-6man-multicast-scopes"/></c>
 
             <c>0x4</c>
             <c>ADMIN-LOCAL</c>
