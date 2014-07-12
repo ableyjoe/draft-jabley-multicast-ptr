@@ -92,8 +92,8 @@
 	using a namespace convention within the IN-ADDR.ARPR domain
 	and the PTR resoure record type.</t>
 
-      <t>The analogous mapping of IPv6 address to names is specified in
-        <xref target="RFC3596"/>, adopting a similar namespace convention
+      <t>The analogous mapping of IPv6 addresses to names is specified in
+        <xref target="RFC3596"/>, and adopts a similar namespace convention
         within the IP6.ARPA domain.</t>
 
       <t>Multicast addresses are assigned by the IANA, and assignments
@@ -101,23 +101,23 @@
 
       <t>For IPv4, Reverse Mapping of assigned multicast addresses
 	to names has historically been provided in an ad-hoc and
-	incomplete fashion, without tight coordination with IANA
+	incomplete fashion, without tight coordination with the IANA
 	multicast address assignment processes. Names assigned to
 	IPv4 multicast addresses have been chosen somewhat arbitrarily
 	within the MCAST.NET domain. For IPv6, no Reverse Mapping
 	is provided.</t>
 
       <t>This document describes procedures to be followed by the IANA
-        to support predictable and consistent Reverse Mapping for 
-        registered multicast addresses in IPv4 and IPv6.</t>
+        to support predictable and consistent Reverse Mapping for
+        registered multicast addresses in both IPv4 and IPv6.</t>
     </section>
 
     <section title="General Approach">
       <t>This document specifies extensions to existing IPv4 and
-        IPv6 multicast registries to include a mandatory column
+        IPv6 multicast registries to include a mandatory column titled
         "DNS Label". This field is required to be popluated with
-        a unique, valid DNS label for all future multicast address
-        assignments except in the case where reverse mapping for
+        a unique, valid DNS Label for all future multicast address
+        assignments, except in the case where reverse mapping for
         an address is explicitly not desirable.</t>
 
       <t>The procedures at the IANA relating to multicast address
@@ -153,7 +153,7 @@
 
         <t>IPv6 multicast addresses may be of fixed or variable
           scope. The naming scheme for these addresses incorporates
-	  a scope identifier using an additional DNS label ("Scope
+	  a scope identifier using an additional DNS Label ("Scope
 	  Label"), specified in a dedicated registry (see <xref
 	  target="scope_registry"/>). Both fixed and variable scope
           multicast addresses use the same naming scheme.</t>
