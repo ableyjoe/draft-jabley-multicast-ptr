@@ -7,7 +7,7 @@ Internet-Draft                                                 Dyn, Inc.
 Intended status: Best Current Practice                     M. Richardson
 Expires: January 15, 2015                 Sandelman Software Works Corp.
                                                              T. Wicinski
-                                                                     AOL
+                                                        Salesforce, Inc.
                                                            July 14, 2014
 
 
@@ -102,8 +102,8 @@ Table of Contents
    names using a namespace convention within the IN-ADDR.ARPR domain and
    the PTR resoure record type.
 
-   The analogous mapping of IPv6 address to names is specified in
-   [RFC3596], adopting a similar namespace convention within the
+   The analogous mapping of IPv6 addresses to names is specified in
+   [RFC3596], and adopts a similar namespace convention within the
    IP6.ARPA domain.
 
 
@@ -119,22 +119,23 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
 
    For IPv4, Reverse Mapping of assigned multicast addresses to names
    has historically been provided in an ad-hoc and incomplete fashion,
-   without tight coordination with IANA multicast address assignment
+   without tight coordination with the IANA multicast address assignment
    processes.  Names assigned to IPv4 multicast addresses have been
    chosen somewhat arbitrarily within the MCAST.NET domain.  For IPv6,
    no Reverse Mapping is provided.
 
    This document describes procedures to be followed by the IANA to
    support predictable and consistent Reverse Mapping for registered
-   multicast addresses in IPv4 and IPv6.
+   multicast addresses in both IPv4 and IPv6.
 
 2.  General Approach
 
    This document specifies extensions to existing IPv4 and IPv6
-   multicast registries to include a mandatory column "DNS Label".  This
-   field is required to be popluated with a unique, valid DNS label for
-   all future multicast address assignments except in the case where
-   reverse mapping for an address is explicitly not desirable.
+   multicast registries to include a mandatory column titled "DNS
+   Label".  This field is required to be popluated with a unique, valid
+   DNS Label for all future multicast address assignments, except in the
+   case where reverse mapping for an address is explicitly not
+   desirable.
 
    The procedures at the IANA relating to multicast address assignment
    are extended to include the provisioning of appropriate changes in
@@ -164,7 +165,6 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
 
 
 
-
 Abley, et al.           Expires January 15, 2015                [Page 3]
 
 Internet-Draft        Reverse Mapping for Multicast            July 2014
@@ -177,7 +177,7 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
 
    IPv6 multicast addresses may be of fixed or variable scope.  The
    naming scheme for these addresses incorporates a scope identifier
-   using an additional DNS label ("Scope Label"), specified in a
+   using an additional DNS Label ("Scope Label"), specified in a
    dedicated registry (see Section 6.1.1).  Both fixed and variable
    scope multicast addresses use the same naming scheme.
 
@@ -245,7 +245,7 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
 
    The IANA is directed to create a new registry as follows:
 
-   Registry Name:  IPv6 Multicast Address Scopes
+   Registry Name:  IPv6 Multicast Scopes
 
    Registration Procedure:  Standards Action
 
@@ -282,28 +282,30 @@ Abley, et al.           Expires January 15, 2015                [Page 5]
 Internet-Draft        Reverse Mapping for Multicast            July 2014
 
 
-   +-------------+-------------+--------------------------+-----------+
-   | Scope Value | DNS Label   | Scope Name               | Reference |
-   +-------------+-------------+--------------------------+-----------+
-   | 0x0         | (none)      | Reserved                 | [RFC4291] |
-   |             |             |                          |           |
-   | 0x1         | NODE-LOCAL  | Node-Local Scope         | [RFC4291] |
-   |             |             |                          |           |
-   | 0x2         | LINK-LOCAL  | Link-Local Scope         | [RFC4291] |
-   |             |             |                          |           |
-   | 0x3         | (none)      | Reserved                 | [RFC4291] |
-   |             |             |                          |           |
-   | 0x4         | ADMIN-LOCAL | Admin-Local Scope        | [RFC4291] |
-   |             |             |                          |           |
-   | 0x5         | SITE-LOCAL  | Site-Local Scope         | [RFC4291] |
-   |             |             |                          |           |
-   | 0x8         | ORG-LOCAL   | Organisation-Local Scope | [RFC4291] |
-   |             |             |                          |           |
-   | 0xE         | GLOBAL      | Global Scope             | [RFC4291] |
-   +-------------+-------------+--------------------------+-----------+
+   +-------+-------------+--------------------+------------------------+
+   | Scope | DNS Label   | Scope Name         | Reference              |
+   | Value |             |                    |                        |
+   +-------+-------------+--------------------+------------------------+
+   | 0x0   | (none)      | Reserved           | [RFC4291]              |
+   |       |             |                    |                        |
+   | 0x1   | NODE-LOCAL  | Node-Local Scope   | [RFC4291]              |
+   |       |             |                    |                        |
+   | 0x2   | LINK-LOCAL  | Link-Local Scope   | [RFC4291]              |
+   |       |             |                    |                        |
+   | 0x3   | REALM-LOCAL | Realm-Local Scope  | [I-D.multicast-scopes] |
+   |       |             |                    |                        |
+   | 0x4   | ADMIN-LOCAL | Admin-Local Scope  | [RFC4291]              |
+   |       |             |                    |                        |
+   | 0x5   | SITE-LOCAL  | Site-Local Scope   | [RFC4291]              |
+   |       |             |                    |                        |
+   | 0x8   | ORG-LOCAL   | Organisation-Local | [RFC4291]              |
+   |       |             | Scope              |                        |
+   |       |             |                    |                        |
+   | 0xE   | GLOBAL      | Global Scope       | [RFC4291]              |
+   +-------+-------------+--------------------+------------------------+
 
-   The IANA may add "Date Registered" and "Last Revised" columns to the
-   schema at its discretion.
+   Additionally, The IANA SHOULD add "Date Registered" and "Last
+   Revised" columns to the schema.
 
 6.1.2.  IPv4 Multicast Address Space Registries
 
@@ -328,8 +330,6 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
    All existing assignments should have a DNS Label assigned.  A DNS
    Label should be mandatory for all future registrations.  DNS Labels
    are required to be unique for all IPv6 multicast address assignments.
-
-
 
 
 
@@ -539,6 +539,9 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
 
 9.1.  Normative References
 
+   [I-D.multicast-scopes]
+              Droms, R., "IPv6 Multicast Address Scopes", July 2014.
+
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, November 1987.
 
@@ -551,9 +554,6 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
 
    [RFC4291]  Hinden, R. and S. Deering, "IP Version 6 Addressing
               Architecture", RFC 4291, February 2006.
-
-
-
 
 
 
@@ -619,13 +619,13 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
 
 
    Tim Wicinski
-   AOL
+   Salesforce, Inc.
+   1 Market St #300
+   San Francisco, CA  94105
+   US
 
-   Email: tim.wicinski@teamaol.com
-
-
-
-
+   Phone: +1.571.449.1550
+   Email: tjw.ietf@gmail.com
 
 
 
