@@ -62,9 +62,17 @@
     </author>
 
     <author initials="T." surname="Wicinski" fullname="Tim Wicinski">
-      <organization>AOL</organization>
+      <organization>Salesforce, Inc.</organization>
       <address>
-        <email>tim.wicinski@teamaol.com</email>
+       <postal>
+         <street>1 Market St #300</street>
+         <city>San Francisco</city>
+         <region>CA</region>
+         <code>94105</code>
+         <country>US</country>
+       </postal>
+       <phone>+1.571.449.1550</phone>
+       <email>tjw.ietf@gmail.com</email>
       </address>
     </author>
 
@@ -92,8 +100,8 @@
 	using a namespace convention within the IN-ADDR.ARPR domain
 	and the PTR resoure record type.</t>
 
-      <t>The analogous mapping of IPv6 address to names is specified in
-        <xref target="RFC3596"/>, adopting a similar namespace convention
+      <t>The analogous mapping of IPv6 addresses to names is specified in
+        <xref target="RFC3596"/>, and adopts a similar namespace convention
         within the IP6.ARPA domain.</t>
 
       <t>Multicast addresses are assigned by the IANA, and assignments
@@ -101,23 +109,23 @@
 
       <t>For IPv4, Reverse Mapping of assigned multicast addresses
 	to names has historically been provided in an ad-hoc and
-	incomplete fashion, without tight coordination with IANA
+	incomplete fashion, without tight coordination with the IANA
 	multicast address assignment processes. Names assigned to
 	IPv4 multicast addresses have been chosen somewhat arbitrarily
 	within the MCAST.NET domain. For IPv6, no Reverse Mapping
 	is provided.</t>
 
       <t>This document describes procedures to be followed by the IANA
-        to support predictable and consistent Reverse Mapping for 
-        registered multicast addresses in IPv4 and IPv6.</t>
+        to support predictable and consistent Reverse Mapping for
+        registered multicast addresses in both IPv4 and IPv6.</t>
     </section>
 
     <section title="General Approach">
       <t>This document specifies extensions to existing IPv4 and
-        IPv6 multicast registries to include a mandatory column
+        IPv6 multicast registries to include a mandatory column titled
         "DNS Label". This field is required to be popluated with
-        a unique, valid DNS label for all future multicast address
-        assignments except in the case where reverse mapping for
+        a unique, valid DNS Label for all future multicast address
+        assignments, except in the case where reverse mapping for
         an address is explicitly not desirable.</t>
 
       <t>The procedures at the IANA relating to multicast address
@@ -153,7 +161,7 @@
 
         <t>IPv6 multicast addresses may be of fixed or variable
           scope. The naming scheme for these addresses incorporates
-	  a scope identifier using an additional DNS label ("Scope
+	  a scope identifier using an additional DNS Label ("Scope
 	  Label"), specified in a dedicated registry (see <xref
 	  target="scope_registry"/>). Both fixed and variable scope
           multicast addresses use the same naming scheme.</t>
@@ -218,7 +226,7 @@
           <t>The IANA is directed to create a new registry as follows:
 
             <list style="hanging">
-              <t hangText="Registry Name:">IPv6 Multicast Address Scopes</t>
+              <t hangText="Registry Name:">IPv6 Multicast Scopes</t>
 
               <t hangText="Registration Procedure:">Standards Action</t>
 
@@ -255,9 +263,9 @@
             <c><xref target="RFC4291"/></c>
 
             <c>0x3</c>
-            <c>(none)</c>
-            <c>Reserved</c>
-            <c><xref target="RFC4291"/></c>
+            <c>REALM-LOCAL</c>
+            <c>Realm-Local Scope</c>
+            <c><xref target="I-D.multicast-scopes"/></c>
 
             <c>0x4</c>
             <c>ADMIN-LOCAL</c>
@@ -280,8 +288,8 @@
             <c><xref target="RFC4291"/></c>
           </texttable>
 
-          <t>The IANA may add "Date Registered" and "Last Revised"
-            columns to the schema at its discretion.</t>
+          <t>Additionally, The IANA SHOULD add "Date Registered" and "Last Revised"
+            columns to the schema.</t>
         </section>
 
         <section title="IPv4 Multicast Address Space Registries">
@@ -479,6 +487,18 @@
       &rfc1035;
       &rfc3596;
       &rfc4291;
+      <reference anchor="I-D.multicast-scopes">
+        <front>
+          <title>IPv6 Multicast Address Scopes</title>
+          <author fullname="Ron Droms" initials="R." surname="Droms">
+            <organization>Cisco</organization>
+          </author>
+          <date month="July" year="2014" />
+
+        </front>
+        <format target="http://www.ietf.org/id/draft-ietf-6man-multicast-scopes-07"
+                type="XML" />
+      </reference>
     </references>
 
     <references title="Informative References">
