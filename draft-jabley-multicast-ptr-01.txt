@@ -81,7 +81,7 @@ Table of Contents
      6.1.  Registry Changes  . . . . . . . . . . . . . . . . . . . .   5
        6.1.1.  IPv6 Multicast Scope Registry . . . . . . . . . . . .   5
        6.1.2.  IPv4 Multicast Address Space Registries . . . . . . .   6
-       6.1.3.  IPv6 Multicast Address Space Registries . . . . . . .   6
+       6.1.3.  IPv6 Multicast Address Space Registries . . . . . . .   7
      6.2.  Delegation of MCAST.ARPA and MCAST6.ARPA  . . . . . . . .   7
      6.3.  Initial Zone Contents . . . . . . . . . . . . . . . . . .   7
      6.4.  Process Changes . . . . . . . . . . . . . . . . . . . . .   9
@@ -282,27 +282,33 @@ Abley, et al.           Expires January 15, 2015                [Page 5]
 Internet-Draft        Reverse Mapping for Multicast            July 2014
 
 
-   +-------+-------------+--------------------+------------------------+
-   | Scope | DNS Label   | Scope Name         | Reference              |
-   | Value |             |                    |                        |
-   +-------+-------------+--------------------+------------------------+
-   | 0x0   | (none)      | Reserved           | [RFC4291]              |
-   |       |             |                    |                        |
-   | 0x1   | NODE-LOCAL  | Node-Local Scope   | [RFC4291]              |
-   |       |             |                    |                        |
-   | 0x2   | LINK-LOCAL  | Link-Local Scope   | [RFC4291]              |
-   |       |             |                    |                        |
-   | 0x3   | REALM-LOCAL | Realm-Local Scope  | [I-D.multicast-scopes] |
-   |       |             |                    |                        |
-   | 0x4   | ADMIN-LOCAL | Admin-Local Scope  | [RFC4291]              |
-   |       |             |                    |                        |
-   | 0x5   | SITE-LOCAL  | Site-Local Scope   | [RFC4291]              |
-   |       |             |                    |                        |
-   | 0x8   | ORG-LOCAL   | Organisation-Local | [RFC4291]              |
-   |       |             | Scope              |                        |
-   |       |             |                    |                        |
-   | 0xE   | GLOBAL      | Global Scope       | [RFC4291]              |
-   +-------+-------------+--------------------+------------------------+
+   +------+-----------+------------------+-----------------------------+
+   | Scop | DNS Label | Scope Name       | Reference                   |
+   | e Va |           |                  |                             |
+   | lue  |           |                  |                             |
+   +------+-----------+------------------+-----------------------------+
+   | 0x0  | (none)    | Reserved         | [RFC4291]                   |
+   |      |           |                  |                             |
+   | 0x1  | NODE-     | Node-Local Scope | [RFC4291]                   |
+   |      | LOCAL     |                  |                             |
+   |      |           |                  |                             |
+   | 0x2  | LINK-     | Link-Local Scope | [RFC4291]                   |
+   |      | LOCAL     |                  |                             |
+   |      |           |                  |                             |
+   | 0x3  | REALM-    | Realm-Local      | [I-D.ietf-6man-multicast-sc |
+   |      | LOCAL     | Scope            | opes]                       |
+   |      |           |                  |                             |
+   | 0x4  | ADMIN-    | Admin-Local      | [RFC4291]                   |
+   |      | LOCAL     | Scope            |                             |
+   |      |           |                  |                             |
+   | 0x5  | SITE-     | Site-Local Scope | [RFC4291]                   |
+   |      | LOCAL     |                  |                             |
+   |      |           |                  |                             |
+   | 0x8  | ORG-LOCAL | Organisation-    | [RFC4291]                   |
+   |      |           | Local Scope      |                             |
+   |      |           |                  |                             |
+   | 0xE  | GLOBAL    | Global Scope     | [RFC4291]                   |
+   +------+-----------+------------------+-----------------------------+
 
    Additionally, The IANA SHOULD add "Date Registered" and "Last
    Revised" columns to the schema.
@@ -320,6 +326,18 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
    Label should be mandatory for all future registrations.  DNS Labels
    are required to be unique for all IPv4 multicast address assignments.
 
+
+
+
+
+
+
+
+Abley, et al.           Expires January 15, 2015                [Page 6]
+
+Internet-Draft        Reverse Mapping for Multicast            July 2014
+
+
 6.1.3.  IPv6 Multicast Address Space Registries
 
    The IANA is directed to add a mandatory "DNS Label" column to all
@@ -330,13 +348,6 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
    All existing assignments should have a DNS Label assigned.  A DNS
    Label should be mandatory for all future registrations.  DNS Labels
    are required to be unique for all IPv6 multicast address assignments.
-
-
-
-Abley, et al.           Expires January 15, 2015                [Page 6]
-
-Internet-Draft        Reverse Mapping for Multicast            July 2014
-
 
 6.2.  Delegation of MCAST.ARPA and MCAST6.ARPA
 
@@ -367,17 +378,6 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
                  +-------------+-------------+-----------+
 
    then the following DNS records would be required:
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -539,8 +539,9 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
 
 9.1.  Normative References
 
-   [I-D.multicast-scopes]
-              Droms, R., "IPv6 Multicast Address Scopes", July 2014.
+   [I-D.ietf-6man-multicast-scopes]
+              Droms, R., "IPv6 Multicast Address Scopes", draft-ietf-
+              6man-multicast-scopes-07 (work in progress), June 2014.
 
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, November 1987.
@@ -552,8 +553,7 @@ Internet-Draft        Reverse Mapping for Multicast            July 2014
               "DNS Extensions to Support IP Version 6", RFC 3596,
               October 2003.
 
-   [RFC4291]  Hinden, R. and S. Deering, "IP Version 6 Addressing
-              Architecture", RFC 4291, February 2006.
+
 
 
 
@@ -561,6 +561,9 @@ Abley, et al.           Expires January 15, 2015               [Page 10]
 
 Internet-Draft        Reverse Mapping for Multicast            July 2014
 
+
+   [RFC4291]  Hinden, R. and S. Deering, "IP Version 6 Addressing
+              Architecture", RFC 4291, February 2006.
 
 9.2.  Informative References
 
@@ -606,9 +609,6 @@ Authors' Addresses
 
    Phone: +1 613 276 6809
    Email: mcr@sandelman.ottawa.on.ca
-
-
-
 
 
 

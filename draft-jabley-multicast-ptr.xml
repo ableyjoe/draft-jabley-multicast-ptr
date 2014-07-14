@@ -265,7 +265,7 @@
             <c>0x3</c>
             <c>REALM-LOCAL</c>
             <c>Realm-Local Scope</c>
-            <c><xref target="I-D.multicast-scopes"/></c>
+            <c><xref target="I-D.ietf-6man-multicast-scopes"/></c>
 
             <c>0x4</c>
             <c>ADMIN-LOCAL</c>
@@ -487,18 +487,7 @@
       &rfc1035;
       &rfc3596;
       &rfc4291;
-      <reference anchor="I-D.multicast-scopes">
-        <front>
-          <title>IPv6 Multicast Address Scopes</title>
-          <author fullname="Ron Droms" initials="R." surname="Droms">
-            <organization>Cisco</organization>
-          </author>
-          <date month="July" year="2014" />
-
-        </front>
-        <format target="http://www.ietf.org/id/draft-ietf-6man-multicast-scopes-07"
-                type="XML" />
-      </reference>
+      <?rfc include="reference.I-D.ietf-6man-multicast-scopes" ?>
     </references>
 
     <references title="Informative References">
