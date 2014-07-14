@@ -2,7 +2,7 @@ python:
   - "2.7"
 
 before_install:
-  - "sudo apt-get install python-pip"
+  - "sudo apt-get install python-pip python-lxml"
   - "sudo pip install xml2rfc"
 
 script: "make"
